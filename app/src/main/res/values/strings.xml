@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Water Tracker</string>
+    <string name="prefs">prefs</string>
+    <string name="count">count</string>
+    <string name="goal">goal</string>
+    <string name="resetSymbol">\u21BA</string>
+    <string name="add_widget">Add widget</string>
+    <string name="appwidget_text">EXAMPLE</string>
+</resources>
