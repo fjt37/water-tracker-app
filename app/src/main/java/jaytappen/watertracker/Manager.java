@@ -73,11 +73,7 @@ class Manager {
     private void updateWidget() {
         Intent intent = new Intent(context, SmallAppWidget.class);
         intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-        int[] smallIds = AppWidgetManager.getInstance(context).getAppWidgetIds(new ComponentName(context, SmallAppWidget.class));
-        int[] medIds = AppWidgetManager.getInstance(context).getAppWidgetIds(new ComponentName(context, MedAppWidget.class));
-        int[] ids = new int[smallIds.length + medIds.length];
-        System.arraycopy(smallIds, 0, ids, 0, smallIds.length);
-        System.arraycopy(medIds, 0, ids, smallIds.length, medIds.length);
+        int[] ids = AppWidgetManager.getInstance(context).getAppWidgetIds(new ComponentName(context, SmallAppWidget.class));
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
         context.sendBroadcast(intent);
     }
